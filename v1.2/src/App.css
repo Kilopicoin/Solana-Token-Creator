@@ -1,0 +1,167 @@
+.background {
+  background: linear-gradient(135deg, #6f9cfc, #1f0761);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  font-family:Lato;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+
+
+
+  border-radius: 18px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 12px 12px 16px rgb(75, 0, 126);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px; 
+  padding: 2px; 
+  background:linear-gradient(to right, #6f9cfc, #63008a); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+  z-index: -1; /* Adjust z-index to move the pseudo-element behind its parent */
+}
+
+
+
+
+.left-card {
+  background-color: #01051d;
+  color:antiquewhite;
+  margin: 20px;
+}
+
+.right-card {
+  background-color: #01051d;
+  color: antiquewhite;
+  margin: 20px;
+}
+
+.top-card {
+  margin-top: -60px;
+  width: 90%;
+  text-align: center;
+  background-color: #01051d;
+  color: antiquewhite;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.left-card input,
+.left-card button {
+  background-color: rgba(140, 105, 185, 0.116);
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.left-card input::placeholder {
+  color: rgba(255, 255, 255, 0.39); /* Example color: semi-transparent white */
+  text-align: center;
+}
+
+.left-card button {
+  background-color: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.left-card button:hover {
+  background-color: #8000ff;
+}
+
+.right-card {
+  padding: 20px;
+  border-radius: 18px;
+  font-size: 18px;
+}
+
+.left-card input {
+  color: #fff;
+}
+
+p {
+  line-height: 16px;
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+h2 {
+  line-height: 12px;
+  color:aqua;
+  font-family:Lato;
+}
+
+a {
+  color: #8c9de5; /* Link color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #8000ff; /* Darker color on hover */
+}
+
+.important-text {
+  color: rgb(200, 255, 0);
+}
+
+.left-card input[type="text"][placeholder="Token URI"] {
+  width: 90%; /* Adjust the width to your preference */
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Adjust width to fit smaller screens */
+  }
+
+  .top-card {
+    margin-top: 20px; /* Add some top margin to ensure it's fully visible */
+  }
+
+
+}
